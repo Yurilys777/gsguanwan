@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-gray-900 dark:hover:text-white;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-[-2px] left-0 w-0 h-[2px] bg-primary-500 transition-[width] duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .nav-link.active {
+    @apply text-gray-900 dark:text-white after:w-full;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 transition-opacity duration-300 hover:opacity-90;
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-primary-500/10 to-secondary-500/10;
+  }
+  
+  .feature-card {
+    @apply transition-all duration-300 hover:translate-y-[-10px] hover:shadow-xl;
+  }
+  
+  .spline-text {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+  
+  .card-hover-3d {
+    @apply preserve-3d transition-transform duration-500;
+  }
+  
+  .card-hover-3d:hover {
+    @apply rotate-x-10 rotate-y-10;
+  }
+  
+  .radiant-border {
+    @apply relative border-2 border-transparent bg-clip-padding rounded-xl;
+  }
+  
+  .radiant-border::before {
+    content: '';
+    @apply absolute inset-[-2px] bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 rounded-xl -z-10;
+    animation: borderRotate 4s linear infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes borderRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+} 
