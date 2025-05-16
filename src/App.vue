@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div>
     <nav-bar />
-    <main class="flex-grow">
+    <div class="content pt-16">
       <router-view />
-    </main>
+    </div>
     <app-footer />
   </div>
 </template>
@@ -24,6 +24,13 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-900;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: 100vh;
 }
 
 .fade-enter-active,

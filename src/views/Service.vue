@@ -15,7 +15,7 @@
       <div class="text-center mb-16">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            我们的服务
+            技术服务
           </span>
         </h1>
         <p class="text-lg text-white/60 max-w-2xl mx-auto">

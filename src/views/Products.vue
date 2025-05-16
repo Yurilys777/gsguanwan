@@ -15,7 +15,7 @@
       <div class="text-center mb-16">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            我们的产品
+            产品功能
           </span>
         </h1>
         <p class="text-lg text-white/60 max-w-2xl mx-auto">为您的企业提供全方位的自动化办公解决方案</p>
@@ -116,10 +116,75 @@
           </div>
         </div>
       </div>
+      
+      <!-- Safari浏览器模型展示区域 -->
+      <div class="mt-32">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+            PC端界面展示
+          </span>
+        </h2>
+        
+        <div class="flex justify-center">
+          <div class="w-full max-w-5xl transform hover:scale-[1.02] transition-transform duration-300">
+            <SafariMockup 
+              :width="1000" 
+              :height="625" 
+              url="https://autosmartoa.com/dashboard"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- iPhone 模型展示区域 -->
+      <div class="mt-24">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+            移动应用展示
+          </span>
+        </h2>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-12 flex-wrap">
+          <!-- 第一个iPhone展示 -->
+          <div class="flex flex-col items-center transform hover:scale-[1.02] transition-transform duration-300">
+            <iPhone15ProMockup 
+              :width="300" 
+              :height="610" 
+              src="/images/app-screen-1.jpg"
+            />
+            <h3 class="text-xl font-semibold text-white mt-6">智能工作台</h3>
+            <p class="text-gray-300 mt-2 text-center max-w-xs">个性化工作台，数据一目了然</p>
+          </div>
+          
+          <!-- 第二个iPhone展示 -->
+          <div class="flex flex-col items-center transform hover:scale-[1.02] transition-transform duration-300">
+            <iPhone15ProMockup 
+              :width="300" 
+              :height="610" 
+              src="/images/app-screen-2.jpg"
+            />
+            <h3 class="text-xl font-semibold text-white mt-6">任务协作</h3>
+            <p class="text-gray-300 mt-2 text-center max-w-xs">团队协作更高效，任务跟踪一步到位</p>
+          </div>
+          
+          <!-- 第三个iPhone展示 -->
+          <div class="flex flex-col items-center transform hover:scale-[1.02] transition-transform duration-300">
+            <iPhone15ProMockup 
+              :width="300" 
+              :height="610" 
+              src="/images/app-screen-3.jpg"
+            />
+            <h3 class="text-xl font-semibold text-white mt-6">数据分析</h3>
+            <p class="text-gray-300 mt-2 text-center max-w-xs">数据可视化，助力企业决策</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import FallingStarsBackground from '../components/FallingStarsBackground.vue'
+import iPhone15ProMockup from '../components/iPhone15ProMockup.vue'
+import SafariMockup from '../components/SafariMockup.vue'
 </script> 

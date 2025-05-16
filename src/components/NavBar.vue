@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+  <nav class="fixed top-0 left-0 right-0 w-full z-[9999999] bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -14,28 +14,28 @@
         <!-- 导航链接 -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-center space-x-8">
-            <router-link 
-              v-for="(item, index) in navItems" 
-              :key="index"
-              :to="item.path"
+          <router-link 
+            v-for="(item, index) in navItems" 
+            :key="index"
+            :to="item.path"
               class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               :class="{ 'text-white bg-gray-800': isRouteActive(item.path) }"
-            >
-              {{ item.name }}
-            </router-link>
+          >
+            {{ item.name }}
+          </router-link>
           </div>
         </div>
 
         <!-- 登录注册按钮 -->
         <div class="hidden md:flex items-center space-x-4">
           <router-link 
-            to="/login"
+            to="/login" 
             class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
           >
             登录
           </router-link>
           <router-link 
-            to="/register"
+            to="/register" 
             class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105"
           >
             注册
@@ -122,9 +122,9 @@ const isOpen = ref(false)
 const navItems = [
   { name: '首页', path: '/' },
   { name: '关于我们', path: '/about' },
-  { name: '服务', path: '/services' },
+  { name: '技术服务', path: '/services' },
   { name: '解决方案', path: '/solutions' },
-  { name: '产品', path: '/products' },
+  { name: '产品功能', path: '/products' },
   { name: '联系我们', path: '/contact' }
 ]
 
@@ -138,12 +138,12 @@ const isRouteActive = (path) => {
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
-  }
+}
   50% {
     background-position: 100% 50%;
   }
   100% {
     background-position: 0% 50%;
-  }
+}
 }
 </style> 
