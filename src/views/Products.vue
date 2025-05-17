@@ -119,11 +119,12 @@
       
       <!-- Safari浏览器模型展示区域 -->
       <div class="mt-32">
-        <h2 class="text-3xl font-bold text-center mb-12">
+        <h2 class="text-3xl font-bold text-center mb-4">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
             PC端界面展示
           </span>
         </h2>
+        <p class="text-xl text-gray-300 mb-12 text-center">高效直观的操作界面，提升企业办公流程管理效率</p>
         
         <div class="flex justify-center">
           <div class="w-full max-w-5xl transform hover:scale-[1.02] transition-transform duration-300">
@@ -138,11 +139,12 @@
       
       <!-- iPhone 模型展示区域 -->
       <div class="mt-24">
-        <h2 class="text-3xl font-bold text-center mb-12">
+        <h2 class="text-3xl font-bold text-center mb-4">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
             移动应用展示
           </span>
         </h2>
+        <p class="text-xl text-gray-300 mb-12 text-center">随时随地管理工作，让办公不再受时间和空间限制</p>
         
         <div class="flex flex-col md:flex-row justify-center items-center gap-12 flex-wrap">
           <!-- 第一个iPhone展示 -->
